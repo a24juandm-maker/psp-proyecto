@@ -17,4 +17,19 @@ public class HashUtil {
 
         return hexadecimal.toString();
     }
+
+    public static boolean cumpleDificultad(String hash, int dificultad) {
+        if (hash == null || dificultad < 0 || dificultad > 64
+                || dificultad > hash.length()) {
+            return false;
+        }
+
+        for (int i = 0; i < dificultad; i++) {
+            if (hash.charAt(i) != '0') {
+                return false;
+            }
+        }
+
+        return true;
+    }
 }

@@ -33,4 +33,8 @@ public class Bloque {
     public String getHash() {
         return hash;
     }
+
+    public boolean cumpleDificultad(int dificultad) {
+        return HashUtil.cumpleDificultad(hash, dificultad);
+    }
 }

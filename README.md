@@ -5,10 +5,12 @@ Proyecto Java de consola para construir una cadena de bloques sencilla.
 ## Estado actual
 
 - `HashUtil` calcula hashes SHA-256 a partir de texto codificado en UTF-8.
+- También comprueba que un hash comience con el número de ceros indicado por la dificultad.
 - `Bloque` guarda los datos, el hash anterior, el nonce y calcula su propio hash con el formato `hashAnterior|datos|nonce`.
-- `Main` muestra un ejemplo de creación de un primer bloque a partir de una semilla.
+- `Worker` busca un nonce usando una secuencia propia y comunica la primera solución como `nonce|hash`.
+- `Main` pide la seed y la ruta del fichero, valida ambas entradas y muestra el hash inicial y el número de bloques leídos.
 
-La búsqueda de nonce con dificultad y los procesos worker se añadirán en siguientes pasos.
+La coordinación de los cuatro workers desde `Main` se añadirá en siguientes pasos.
 
 ## Abrir y ejecutar
 

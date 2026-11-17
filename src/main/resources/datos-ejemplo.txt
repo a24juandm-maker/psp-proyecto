@@ -1,0 +1,3 @@
+Primer bloque de ejemplo
+Segundo bloque para enlazar con el anterior
+Tercer bloque de la cadena

@@ -1,6 +1,6 @@
 # Proyecto PSP: Mini blockchain
 
-Aplicación Java de consola que construye una cadena sencilla de bloques a partir de las líneas de un fichero.
+Aplicación Java de consola que construye una cadena sencilla de bloques a partir de las líneas de un fichero. Para cada bloque, cuatro procesos buscan en paralelo un nonce válido; el proceso principal comprueba la solución, incorpora el bloque y utiliza su hash para enlazar el siguiente.
 
 ## Cómo funciona
 

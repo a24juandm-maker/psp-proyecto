@@ -5,6 +5,7 @@ Aplicación Java de consola que construye una cadena sencilla de bloques a parti
 ## Cómo funciona
 
 - Se introduce una semilla y la ruta de un fichero de texto.
+- La dificultad se configura con la constante `DIFICULTAD` de `Main` y se mantiene durante toda la ejecución.
 - Cada línea no vacía del fichero se procesa como un bloque.
 - El hash inicial se calcula con SHA-256 sobre la semilla.
 - El hash de cada bloque se calcula como SHA-256 de `hashAnterior|datos|nonce`.
@@ -21,7 +22,14 @@ Aplicación Java de consola que construye una cadena sencilla de bloques a parti
 
 ## Ejecución
 
-Abre la carpeta del proyecto en IntelliJ IDEA y ejecuta `org.example.Main`. El programa solicita, en este orden, la semilla, la dificultad y la ruta del fichero. La dificultad debe ser un número entre 0 y 64. Para empezar, usa un valor bajo, como 2; cuanto mayor sea, más intentos de hash hacen falta.
+Abre la carpeta del proyecto en IntelliJ IDEA, espera a que cargue Maven y ejecuta `org.example.Main`. El programa solicita la semilla y la ruta del fichero. Antes de ejecutarlo, puedes cambiar la constante `DIFICULTAD` en `Main`; debe estar entre 0 y 64. Para empezar, usa un valor bajo, como 2; cuanto mayor sea, más intentos de hash hacen falta.
+
+También puedes compilar y ejecutar desde la carpeta del proyecto con Maven:
+
+```text
+mvn clean package
+java -cp target/classes org.example.Main
+```
 
 El fichero debe contener una línea de texto por bloque. Puedes indicar `src/main/resources/datos-ejemplo.txt` para usar el ejemplo incluido.
 

@@ -21,7 +21,7 @@ import java.util.concurrent.TimeUnit;
 
 public class Main {
     private static final int NUM_WORKERS = 4;
-    private static final int DIFICULTAD = 2;
+    private static final int DIFICULTAD = 5;
 
     public static void main(String[] args) {
         if (DIFICULTAD < 0 || DIFICULTAD > 64) {
